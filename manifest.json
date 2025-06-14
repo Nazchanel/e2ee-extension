@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Universal E2EE",
+  "version": "1.0",
+  "description": "Encrypt and decrypt selected text locally with no servers",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["<all_urls>"]
+}
