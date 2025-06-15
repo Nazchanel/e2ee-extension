@@ -5,6 +5,9 @@
     body { font-family: sans-serif; padding: 10px; width: 300px; }
     textarea, input { width: 100%; margin-top: 5px; }
     button { margin-top: 10px; width: 100%; }
+    .password-item { margin: 5px 0; padding: 5px; border-bottom: 1px solid #eee; }
+    .password-item button { width: auto; margin-left: 5px; }
+    #saved-passwords { max-height: 150px; overflow-y: auto; margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -13,6 +16,9 @@
   <input id="password" type="password" placeholder="Enter password">
   <button id="encrypt">Encrypt</button>
   <textarea id="output" rows="3" readonly placeholder="Encrypted output appears here..."></textarea>
+
+  <h3>Saved Passwords</h3>
+  <div id="saved-passwords"></div>
 
   <script src="popup.js"></script>
 </body>

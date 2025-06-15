@@ -3,12 +3,26 @@
   "name": "Universal E2EE",
   "version": "1.0",
   "description": "Encrypt and decrypt selected text locally with no servers",
-  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "permissions": [
+    "contextMenus",
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html"
   },
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": ["<all_urls>"],
+  "commands": {
+    "encrypt-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "Command+Shift+E"
+      },
+      "description": "Encrypt selected text"
+    }
+  }
 }
